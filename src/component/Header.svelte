@@ -1,5 +1,6 @@
 <script>
     import { items } from "../stores";
+    console.log($items);
 </script>
 
 <style>
