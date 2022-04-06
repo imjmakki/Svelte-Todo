@@ -2,7 +2,7 @@
     import { items } from "../stores";
 
     $: itemCount = $items.length;
-    $: completedItemCount = $items.filter(item => item.completed);
+    $: completedItemCount = $items.filter(item => item.completed).length;
 </script>
 
 <style>
