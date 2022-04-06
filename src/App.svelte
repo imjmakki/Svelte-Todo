@@ -4,7 +4,8 @@
 
 <style>
     .container {
-
+        width: 500px;
+        background: #009579;
     }
 </style>
 
