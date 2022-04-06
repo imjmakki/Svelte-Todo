@@ -1,5 +1,5 @@
 <script>
-
+    import { items } from "../stores";
 </script>
 
 <style>
