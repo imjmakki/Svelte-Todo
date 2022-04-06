@@ -1,5 +1,7 @@
 <script>
     import { items } from "../stores";
+
+    $: itemCount = $items.length;
 </script>
 
 <style>
