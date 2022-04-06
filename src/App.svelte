@@ -13,5 +13,5 @@
 </style>
 
 <div class="container">
-    <Header></Header>
+    <Header />
 </div>
