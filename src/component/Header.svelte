@@ -20,5 +20,5 @@
 
 <div class="header">
     <span>Todo-List</span>
-    <span>0/0</span>
+    <span>{completedItemCount}/{itemCount}</span>
 </div>
