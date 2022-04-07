@@ -11,7 +11,7 @@
 </script>
 
 <div class="item" class:completed>
-    <input class="text-input" type="text" bind:value={text} readonly={completed} on:keyup={({key, target})} />
+    <input class="text-input" type="text" bind:value={text} readonly={completed} on:keyup={({key, target}) => key === "enter" && target.blur()} />
     <input class="completed-checkbox" type="checkbox" bind:checked={completed} />
 </div>
 
