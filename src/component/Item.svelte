@@ -4,7 +4,7 @@
 
 <div class="item">
     <input class="text-input" type="text" bind:value={text} readonly={completed}/>
-    <input type="checkbox" />
+    <input class="completed-checkbox" type="checkbox" />
 </div>
 
 <style>
