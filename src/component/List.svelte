@@ -14,6 +14,7 @@
     }
 
     function handleDelete(e) {
+        $items = $items.filter(item => item.id !== e.detail);
     }
 
     onMount(async () => {
