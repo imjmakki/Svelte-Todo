@@ -1,5 +1,6 @@
 <script>
     import { createEventDispatcher } from "svelte";
+
     export let id, text, completed;
 
     const dispatch = createEventDispatcher();
