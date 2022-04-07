@@ -14,5 +14,13 @@
 <input type="tel" on:keyup={handeKeyUp} bind:value placeholder="Add Item" />
 
 <style>
-
+    input {
+        box-sizing: border-box;
+        margin-bottom: 15px;
+        padding: 15px;
+        border: none;
+        outline: none;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.25);
+    }
 </style>
