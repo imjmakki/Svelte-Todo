@@ -17,4 +17,7 @@
     .item:focus-within {
         background: rgba(255, 255, 255, 0.0);
     }
+    .text-input {
+        flex-grow: 1;
+    }
 </style>
