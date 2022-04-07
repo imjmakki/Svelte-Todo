@@ -16,6 +16,6 @@
     }
 
     onMount(async () => {
-
+        $items = await ToDoAPI.getAll();
     });
 </script>
