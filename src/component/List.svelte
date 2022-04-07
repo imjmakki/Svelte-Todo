@@ -2,6 +2,7 @@
     import { onMount } from "svelte";
     import { items } from "../stores";
     import ToDoAPI from "../ToDoAPI";
+    import Item from "./Item.svelte";
 
     function handleNewItem(e) {
 
