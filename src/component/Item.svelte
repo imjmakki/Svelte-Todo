@@ -3,7 +3,7 @@
 </script>
 
 <div class="item">
-    <input class="text-input" type="text" />
+    <input class="text-input" type="text" bind:value={text} />
 </div>
 
 <style>
