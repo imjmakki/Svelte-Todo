@@ -10,6 +10,7 @@
     function handleUpdate(e) {
         const index = $items.findIndex(item => item.id === e.detail.id);
         $items[index] = e.detail;
+        ToDoAPI.save($items);
     }
 
     function handleDelete(e) {
