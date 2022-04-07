@@ -3,6 +3,7 @@
     import { items } from "../stores";
     import ToDoAPI from "../ToDoAPI";
     import Item from "./Item.svelte";
+    import NewItem from "./NewItem.svelte";
 
     function handleNewItem(e) {
     }
