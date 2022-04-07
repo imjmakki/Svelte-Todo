@@ -22,6 +22,7 @@
 
 <div class="list">
     {#each $items as item (item)}
+        {JSON.stringify(item)}
     {/each}
 </div>
 
