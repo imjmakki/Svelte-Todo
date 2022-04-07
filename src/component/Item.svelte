@@ -17,6 +17,9 @@
     .item.completed {
         background: #dddddd;
     }
+    .item.completed .text-input {
+
+    }
     .item:focus-within {
         background: rgba(255, 255, 255, 0.0);
     }
