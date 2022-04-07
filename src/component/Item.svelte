@@ -11,6 +11,9 @@
 
     function handleDoubleClick() {
         const yes = confirm("Are you sure you like to remove this item");
+
+        if (yes) {
+        }
     }
 </script>
 
