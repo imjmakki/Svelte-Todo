@@ -19,5 +19,8 @@
     }
     .text-input {
         flex-grow: 1;
+        background: none;
+        border: none;
+        outline: none;
     }
 </style>
