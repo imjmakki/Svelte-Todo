@@ -23,5 +23,6 @@
         width: 100%;
         background: rgba(0, 0, 0, 0.25);
         color: #ffffff;
+        font-weight: bold;
     }
 </style>
