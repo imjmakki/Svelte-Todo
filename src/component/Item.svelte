@@ -14,6 +14,9 @@
         padding: 15px;
         background: #ffffff;
     }
+    .item-completed {
+
+    }
     .item:focus-within {
         background: rgba(255, 255, 255, 0.0);
     }
