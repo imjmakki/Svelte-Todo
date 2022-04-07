@@ -5,15 +5,12 @@
     import Item from "./Item.svelte";
 
     function handleNewItem(e) {
-
     }
 
     function handleUpdate(e) {
-
     }
 
     function handleDelete(e) {
-
     }
 
     onMount(async () => {
