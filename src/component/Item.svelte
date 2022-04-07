@@ -6,7 +6,7 @@
     const dispatch = createEventDispatcher();
 
     function triggerUpdate() {
-
+        dispatch("update", {id, text, completed});
     }
 </script>
 
