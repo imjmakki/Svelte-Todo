@@ -20,7 +20,7 @@
 
 <div class="list">
     {#each $items as item (item)}
-        <Item {...item} />
+        <Item {...item} on:updaate={handleUpdate} on:delete={handleDelete} />
         {:else}
         <p class="list-status">There is no item in the list</p>
     {/each}
