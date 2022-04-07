@@ -1,5 +1,6 @@
 <script>
     import Header from "./component/Header.svelte";
+    import List from "./component/List.svelte";
 </script>
 
 <style>
@@ -14,4 +15,5 @@
 
 <div class="container">
     <Header />
+    <List />
 </div>
