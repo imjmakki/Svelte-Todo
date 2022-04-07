@@ -1,7 +1,6 @@
 <script>
     function handeKeyUp({key}) {
-        if () {
-        }
+        if (key !== "Enter" || value.length === 0) return;
     }
 
     let value = "";
