@@ -23,7 +23,7 @@
 
 <div class="list">
     {#each $items as item (item)}
-        {JSON.stringify(item)}
+        <Item {...item} />
         {:else}
         <p class="list-status">There is no item in the list</p>
     {/each}
