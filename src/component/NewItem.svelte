@@ -1,5 +1,6 @@
 <script>
-
+    function handeKeyUp() {
+    }
 </script>
 
 <input type="tel" on:keyup={handeKeyUp} placeholder="Add Item" />
