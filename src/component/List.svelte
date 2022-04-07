@@ -12,7 +12,8 @@
                 id: uuidv4(),
                 text: e.detail,
                 completed: false
-            }
+            },
+            ...$items
         ];
     }
 
