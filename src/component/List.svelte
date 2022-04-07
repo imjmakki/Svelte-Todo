@@ -25,6 +25,7 @@
 </script>
 
 <div class="list">
+    <NewItem />
     {#each $items as item (item)}
         <Item {...item} on:updaate={handleUpdate} on:delete={handleDelete} />
         {:else}
