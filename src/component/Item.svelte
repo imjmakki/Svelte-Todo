@@ -13,6 +13,7 @@
         const yes = confirm("Are you sure you like to remove this item");
 
         if (yes) {
+            dispatch("delete", id);
         }
     }
 </script>
