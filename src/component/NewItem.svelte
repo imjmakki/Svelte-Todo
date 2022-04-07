@@ -6,6 +6,8 @@
     let value = "";
     function handeKeyUp({key}) {
         if (key !== "Enter" || value.length === 0) return;
+        dispatch("newItem", value);
+        value = "";
     }
 </script>
 
