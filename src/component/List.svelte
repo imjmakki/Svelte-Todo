@@ -12,4 +12,8 @@
     function handleDelete(e) {
 
     }
+
+    onMount(async () => {
+        
+    });
 </script>
