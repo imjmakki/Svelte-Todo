@@ -15,6 +15,7 @@
 
     function handleDelete(e) {
         $items = $items.filter(item => item.id !== e.detail);
+        ToDoAPI.save($items);
     }
 
     onMount(async () => {
