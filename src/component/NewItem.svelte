@@ -2,7 +2,7 @@
 
 </script>
 
-<input type="tel" />
+<input type="tel" on:keyup={handeKeyUp} placeholder="Add Item" />
 
 <style>
 
