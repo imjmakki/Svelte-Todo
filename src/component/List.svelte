@@ -6,6 +6,9 @@
     import NewItem from "./NewItem.svelte";
 
     function handleNewItem(e) {
+        $items = [
+
+        ];
     }
 
     function handleUpdate(e) {
