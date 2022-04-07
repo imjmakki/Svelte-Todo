@@ -15,6 +15,7 @@
         background: #ffffff;
     }
     .item.completed {
+        background: #dddddd;
     }
     .item:focus-within {
         background: rgba(255, 255, 255, 0.0);
