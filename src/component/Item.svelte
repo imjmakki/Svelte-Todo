@@ -25,4 +25,7 @@
         font-weight: 500;
         font-size: 1em;
     }
+    .completed-checkbox {
+        margin-left: 15px;
+    }
 </style>
