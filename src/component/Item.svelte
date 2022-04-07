@@ -18,7 +18,8 @@
         background: #dddddd;
     }
     .item.completed .text-input {
-
+        color: #555555;
+        text-decoration: line-through;
     }
     .item:focus-within {
         background: rgba(255, 255, 255, 0.0);
