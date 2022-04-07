@@ -24,5 +24,7 @@
         background: rgba(0, 0, 0, 0.25);
         color: #ffffff;
         font-weight: bold;
+        font-size: 1em;
+        cursor: pointer;
     }
 </style>
