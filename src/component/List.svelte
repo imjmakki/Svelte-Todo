@@ -21,7 +21,7 @@
 </script>
 
 <div class="list">
-    {#each items as item}
+    {#each $items as item}
     {/each}
 </div>
 
