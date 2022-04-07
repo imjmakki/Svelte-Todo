@@ -22,5 +22,7 @@
         background: none;
         border: none;
         outline: none;
+        font-weight: 500;
+        font-size: 1em;
     }
 </style>
