@@ -27,4 +27,7 @@
         font-size: 1em;
         cursor: pointer;
     }
+    input::placeholder {
+        color: #ffffff;
+    }
 </style>
