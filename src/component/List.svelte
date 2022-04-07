@@ -23,6 +23,8 @@
 <div class="list">
     {#each $items as item (item)}
         {JSON.stringify(item)}
+        {:else}
+        <p class="list-status">There is no item in the list</p>
     {/each}
 </div>
 
