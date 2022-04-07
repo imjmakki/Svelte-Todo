@@ -1,38 +1,20 @@
 <script>
-    import { createEventDispatcher } from "svelte";
+    import {createEventDispatcher} from "svelte";
 
-    export let id, text, completed;
-
+    export let id, text, complete;
     const dispatch = createEventDispatcher();
 
     function triggerUpdate() {
-        dispatch("update", {id, text, completed});
+        dispatch("update", {id, text, complete});
     }
 
     function handleDoubleClick() {
-        const yes = confirm("Are you sure you like to remove this item");
-
+        const yes = confirm("Are you sure you wish to delete this item?");
         if (yes) {
             dispatch("delete", id);
         }
     }
 </script>
-
-<div class="item" class:completed on:dblclick={handleDoubleClick}>
-    <input
-            class="text-input"
-            type="text"
-            bind:value={text} readonly={completed}
-            on:keyup={({key, target}) => key === "enter" && target.blur()}
-            on:blur={() => triggerUpdate()}
-    />
-    <input
-            class="completed-checkbox"
-            type="checkbox"
-            bind:checked={completed}
-            on:change={() => triggerUpdate()}
-    />
-</div>
 
 <style>
     .item {
@@ -41,16 +23,20 @@
         padding: 15px;
         background: #ffffff;
     }
-    .item.completed {
+
+    .item:focus-within {
+        background: rgba(255, 255, 255, 0.8);
+    }
+
+    .item.complete {
         background: #dddddd;
     }
-    .item.completed .text-input {
-        color: #555555;
+
+    .item.complete .text-input {
+        color: #666666;
         text-decoration: line-through;
     }
-    .item:focus-within {
-        background: rgba(255, 255, 255, 0.0);
-    }
+
     .text-input {
         flex-grow: 1;
         background: none;
@@ -59,7 +45,23 @@
         font-weight: 500;
         font-size: 1em;
     }
-    .completed-checkbox {
+
+    .complete-checkbox {
         margin-left: 15px;
     }
 </style>
+
+<div className="item" class:complete on:dblclick={handleDoubleClick}>
+    <input
+            className="text-input"
+            type="text"
+            bind:value={text}
+            readOnly={complete}
+            on:keyup={({ key, target }) => key === 'Enter' && target.blur()}
+            on:blur={() => triggerUpdate()}/>
+    <input
+            className="complete-checkbox"
+            type="checkbox"
+            bind:checked={complete}
+            on:change={() => triggerUpdate()}/>
+</div>

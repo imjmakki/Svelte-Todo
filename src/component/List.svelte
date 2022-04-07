@@ -1,47 +1,56 @@
 <script>
-    import { onMount } from "svelte";
-    import { v4 as uuidv4 } from "uuid";
-    import { items } from "../stores";
-    import ToDoAPI from "../ToDoAPI";
+    import {onMount} from "svelte";
+    import {v4 as uuidv4} from "uuid";
+    import {items} from "../stores";
     import Item from "./Item.svelte";
     import NewItem from "./NewItem.svelte";
+    import ToDoAPI from "../TodoApi";
 
-    function handleNewItem(e) {
+    /**
+     * Add new item to list and save to API.
+     */
+    function handleNewItem({detail: text}) {
         $items = [
             {
                 id: uuidv4(),
-                text: e.detail,
-                completed: false
+                text,
+                complete: false,
             },
-            ...$items
+            ...$items,
         ];
         ToDoAPI.save($items);
     }
 
-    function handleUpdate(e) {
-        const index = $items.findIndex(item => item.id === e.detail.id);
-        $items[index] = e.detail;
+    /**
+     * Update store with new data and save to API.
+     */
+    function handleUpdate({detail}) {
+        const index = $items.findIndex((item) => item.id === detail.id);
+        $items[index] = detail;
         ToDoAPI.save($items);
     }
 
-    function handleDelete(e) {
-        $items = $items.filter(item => item.id !== e.detail);
+    /**
+     * Delete item by ID from the store and save to API.
+     */
+    function handleDelete({detail: id}) {
+        $items = $items.filter((item) => item.id !== id);
         ToDoAPI.save($items);
     }
 
+    let itemsSorted = [];
+    $: {
+        itemsSorted = [...$items];
+        itemsSorted.sort((a, b) => {
+            if (a.complete && b.complete) return 0;
+            if (a.complete) return 1;
+            if (b.complete) return -1;
+        });
+    }
     onMount(async () => {
         $items = await ToDoAPI.getAll();
     });
 </script>
-
-<div class="list">
-    <NewItem on:newItem={handleNewItem} />
-    {#each $items as item (item)}
-        <Item {...item} on:updaate={handleUpdate} on:delete={handleDelete} />
-        {:else}
-        <p class="list-status">There is no item in the list</p>
-    {/each}
-</div>
 
 <style>
     .list {
@@ -56,3 +65,12 @@
         font-size: 1.1em;
     }
 </style>
+
+<div className="list">
+    <NewItem on:newitem={handleNewItem}/>
+    {#each itemsSorted as item (item)}
+        <Item {...item} on:update={handleUpdate} on:delete={handleDelete}/>
+    {:else}
+        <p className="list-status">No Items Exist</p>
+    {/each}
+</div>

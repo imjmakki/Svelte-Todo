@@ -1,6 +1,6 @@
 <script>
-    import Header from "./component/Header.svelte";
-    import List from "./component/List.svelte";
+import Header from "./component/Header.svelte";
+import List from "./component/List.svelte";
 </script>
 
 <style>
@@ -9,7 +9,7 @@
         background: #009579;
     }
     :global(.container *) {
-        font-family: sans-serif;
+        font-family: "Quicksand", sans-serif;
     }
 </style>
 

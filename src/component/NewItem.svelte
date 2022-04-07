@@ -1,17 +1,13 @@
 <script>
     import { createEventDispatcher } from "svelte";
-
     const dispatch = createEventDispatcher();
-
     let value = "";
-    function handeKeyUp({key}) {
+    function handleKeyUp({ key }) {
         if (key !== "Enter" || value.length === 0) return;
-        dispatch("newItem", value);
+        dispatch("newitem", value);
         value = "";
     }
 </script>
-
-<input type="tel" on:keyup={handeKeyUp} bind:value placeholder="Add Item" />
 
 <style>
     input {
@@ -27,7 +23,10 @@
         font-size: 1em;
         cursor: pointer;
     }
+    input,
     input::placeholder {
         color: #ffffff;
     }
 </style>
+
+<input type="text" on:keyup={handleKeyUp} bind:value placeholder="+ Add item" />
