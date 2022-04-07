@@ -8,7 +8,11 @@
 
     function handleNewItem(e) {
         $items = [
-            {}
+            {
+                id: uuidv4(),
+                text: e.detail,
+                completed: false
+            }
         ];
     }
 
