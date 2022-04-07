@@ -8,9 +8,12 @@
     function triggerUpdate() {
         dispatch("update", {id, text, completed});
     }
+
+    function handleDoubleClick() {
+    }
 </script>
 
-<div class="item" class:completed>
+<div class="item" class:completed on:dblclick={handleDoubleClick}>
     <input
             class="text-input"
             type="text"
