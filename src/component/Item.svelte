@@ -4,6 +4,10 @@
     export let id, text, completed;
 
     const dispatch = createEventDispatcher();
+
+    function triggerUpdate() {
+
+    }
 </script>
 
 <div class="item" class:completed>
