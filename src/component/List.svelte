@@ -15,6 +15,7 @@
             },
             ...$items
         ];
+        ToDoAPI.save($items);
     }
 
     function handleUpdate(e) {
