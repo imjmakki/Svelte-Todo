@@ -8,6 +8,7 @@
     }
 
     function handleUpdate(e) {
+        const index = $items.findIndex(item => item.id === e.detail.id);
     }
 
     function handleDelete(e) {
