@@ -8,5 +8,13 @@
 </div>
 
 <style>
-
+    .item {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        background: #ffffff;
+    }
+    .item:focus-within {
+        background: rgba(255, 255, 255, 0.0);
+    }
 </style>
