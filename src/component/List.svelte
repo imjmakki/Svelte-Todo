@@ -4,4 +4,12 @@
     function handleNewItem(e) {
 
     }
+
+    function handleUpdate(e) {
+
+    }
+
+    function handleDelete(e) {
+
+    }
 </script>
