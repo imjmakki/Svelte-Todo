@@ -1,5 +1,6 @@
 <script>
     import { onMount } from "svelte";
+    import { v4 as uuidv4 } from "uuid";
     import { items } from "../stores";
     import ToDoAPI from "../ToDoAPI";
     import Item from "./Item.svelte";
@@ -7,6 +8,7 @@
 
     function handleNewItem(e) {
         $items = [
+            {}
         ];
     }
 
