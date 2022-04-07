@@ -2,7 +2,7 @@
     export let id, text, completed;
 </script>
 
-<div class="item">
+<div class="item" class:completed>
     <input class="text-input" type="text" bind:value={text} readonly={completed}/>
     <input class="completed-checkbox" type="checkbox" bind:checked={completed} />
 </div>
